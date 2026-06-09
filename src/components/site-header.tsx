@@ -48,7 +48,7 @@ export function SiteHeader() {
             render={
               <Button
                 variant="outline"
-                className="group border-primary/20 flex h-10 items-center gap-2.5 rounded-lg bg-black/10 px-2 py-6 shadow-none transition-colors duration-300"
+                className="group border-primary/20 flex h-10 items-center gap-2.5 rounded-lg bg-black/5 px-2 py-6 shadow-none transition-colors duration-300"
               />
             }
           >
