@@ -5,11 +5,15 @@ import Dashboard from "@/pages/dashboard";
 import Home from "@/pages/home";
 import Login from "@/pages/login";
 import Order from "@/pages/order";
+import PortalLogin from "@/pages/portal-login";
 import Profile from "@/pages/profile";
 
 import { Layout } from "@/components/layout";
 
+import { usePortalLink } from "./hooks/use-portals-link";
+
 export default function App() {
+  usePortalLink();
   return (
     <BrowserRouter>
       <Authenticated>
@@ -25,7 +29,8 @@ export default function App() {
 
       <Unauthenticated>
         <Routes>
-          <Route path="*" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/login/:portalId" element={<PortalLogin />} />
         </Routes>
       </Unauthenticated>
     </BrowserRouter>
